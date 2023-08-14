@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gastronomia Italiana</title>
+    <h1 style="text-align: center;font-family:'Courier New', Courier, monospace;font-size: 60px;">GASTRONOMIA ITALIANA</h1>
+
+<!--AQUÍ ESTÁ EL ELEMENTO DEL AUDIO-->
+
+    <audio controls>
+        <source src="Tarantela.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+      
+    <p>  
+        
+<!--AQUI ESTAN LOS ESTILOS DE TODAS LAS SECCIONES EN LA PAGINA INCUYENDO TEXTOS-->
+
+<style> 
+
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    border: 0;
+}
+ 
+ul {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: large;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  background-color: #f1f1f1;
+  position: top;
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 50px;
+
+}
+ 
+li a {
+  display: block;
+  color: #373333;
+  padding: 10px;
+  text-decoration: none;
+}
+ 
+li a.active {
+  background-color: rgb(99, 99, 246);
+  color: white;
+}
+ 
+#home {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    position: relative;
+    margin-left: 0%;
+    padding: 1px 16px;
+    height: 1000px; 
+    color: black;
+    margin-bottom: 50px;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://images.pexels.com/photos/1398688/pexels-photo-1398688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5%;
+    opacity: 0.5; 
+    z-index: -1;
+}
+
+
+#plat {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 26px;
+    position: relative;
+    margin-left: 0%;
+    padding: 1px 16px;
+    height: 1000px; 
+    color: black;
+    margin-bottom: 50px;
+}
+
+#plat::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5%;
+    opacity: 0.5; 
+    z-index: -1;
+}
+
+
+ 
+#exp {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    position: relative;
+    margin-left: 0%;
+    padding: 1px 16px;
+    height: 1000px; 
+    color: black;
+    margin-bottom: 50px;
+}
+
+#exp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://images.pexels.com/photos/546945/pexels-photo-546945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5%;
+    opacity: 0.5; 
+    z-index: -1;
+}
+ 
+#rest {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    position: relative;
+    margin-left: 0%;
+    padding: 1px 16px;
+    height: 1300px; 
+    color: black;
+    margin-bottom: 50px;
+}
+
+#rest::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://images.pexels.com/photos/6659620/pexels-photo-6659620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5%;
+    opacity: 0.5; 
+    z-index: -1;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; 
+  }
+
+</style>
+ 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
+</head>
+<body>
+ 
+
+  <!--AQUÍ EMPIEZA EL CONTENIDO DE LA PAGINA-->
+
+<ul>
+  <li><a class="active" href="#home">Fundamentos</a></li>
+  <li><a href="#plat">Principales platillos</a></li>
+  <li id="contacto"><a href="#exp">Principales exponentes</a></li>
+  <li><a href="#rest">Restaurantes y experiencias</a></li>
+</ul>
+
+<div id="home" data-aos="fade-down">
+  <h2>Fundamentos</h2>
+  <h3>Gastronomia italiana</h3>
+  <p>La gastronomía italiana (cucina italiana) son los alimentos, técnicas, platos y demás tradición culinaria de Italia, la cual es practicada por sus habitantes y refleja la riqueza cultural de sus regiones y de su historia.
+    La cocina italiana es parte integral de las gastronomías mediterráneas, cuya dieta fue declarada Patrimonio Cultural Inmaterial de la Humanidad en 2010 por la Unesco, y es imitada y practicada en todo el mundo. Algunas preparaciones más reconocidas son la pizza, el risotto, muchas formas de pasta, la parmigiana, la frittata, el gelato o el tiramisú. Italia también posee una larga tradición de vinos, café, chocolate, licores, quesos o aceite entre otros productos.</p>
+  <p>Se trata de una cocina con fuerte carácter histórico y tradicional, variada gracias a cada una de sus regiones y heredera de largas tradiciones, que ha sabido perpetuar recetas antiguas como la polenta (alimento de la legión romana) o la pizza, plato de Nápoles por excelencia, entre muchos otros platos italianos que hoy en día se pueden degustar en cualquier lugar del mundo, así como en una típica trattoria italiana.</p>
+</div>
+ 
+<div id="plat" data-aos="fade-down">
+    <h2>Principales platillos </h2>
+    <p> - <strong>Pizza:</strong> Un icónico platillo italiano compuesto por una base de masa delgada cubierta con salsa de tomate, queso mozzarella y una variedad de ingredientes, como jamón, champiñones, pepperoni, aceitunas y más.</p>
+    <p> - <strong>Pasta:</strong> La pasta es un pilar fundamental de la cocina italiana. Hay una amplia variedad de formas y tipos de pasta, como espaguetis, penne, raviolis y lasaña, que se sirven con diversas salsas como bolognesa, pesto y carbonara.</p>
+    <p> - <strong>Lasagna:</strong> Un platillo de capas de pasta intercaladas con una mezcla de carne, salsa de tomate, queso ricotta y mozzarella, cocido al horno hasta que esté dorado y delicioso.</p>
+    <p> - <strong>Risotto:</strong> Un arroz cremoso cocinado en caldo y a menudo mezclado con ingredientes como hongos, mariscos, espárragos o queso parmesano.</p>
+    <p> - <strong>Ossobuco:</strong> Un guiso tradicionalmente hecho con carne de ternera, generalmente de la pierna, cocida lentamente con verduras, vino blanco y caldo. Se sirve a menudo con gremolata (una mezcla de ajo, perejil y ralladura de limón).</p>
+    <p> - <strong>Tiramisú:</strong> Un postre clásico italiano hecho con capas de bizcocho empapado en café y licor, alternado con una crema de mascarpone y espolvoreado con cacao en polvo.</p>
+    <p> - <strong>Carpaccio:</strong> Finas láminas de carne cruda, generalmente carne de res o pescado, sazonadas con aceite de oliva, limón, parmesano y a veces alcaparras.</p>
+    <p> - <strong>Panzanella:</strong> Una ensalada rústica hecha con pan toscano duro remojado en agua y luego mezclado con tomates frescos, cebolla, albahaca, aceite de oliva y vinagre.</p>
+    <p> - <strong>Focaccia:</strong> Un pan plano y esponjoso similar a la pizza, cubierto con aceite de oliva y a menudo sazonado con hierbas y sal.</p>
+
+</div>
+ 
+  <div id="exp" data-aos="fade-down">
+    <h2>Principales exponentes</h2>
+    <h3>Los mejores chefs</h3>
+    <p><strong>Massimo Bottura:</strong> Innovador chef de "Osteria Francescana".</p>
+    <p><strong>Gualtiero Marchesi:</strong> Introdujo sofisticación a la cocina italiana.</p>
+    <p><strong>Lidia Bastianich:</strong> Promotora de la auténtica cocina italiana en EE. UU.</p>
+    <p><strong>Carlo Petrini:</strong> Fundador del movimiento Slow Food.</p>
+    <p><strong>Mario Batali:</strong> Promovió la cocina italiana en EE. UU. y "Eataly".</p>
+    <p><strong>Massimo Alberini:</strong> Experto en pasta y tradiciones culinarias.</p>
+    <p><strong>Enoteca Pinchiorri:</strong> Creativa cocina toscana en Florencia.</p>
+    <p><strong>Antonio Carluccio:</strong> Enfocado en ingredientes simples y cocina tradicional.</p>
+    <p><strong>Nadia Santini:</strong> Chef de "Dal Pescatore", destacando sabores auténticos.</p>
+    <p><strong>Anna Tasca Lanza:</strong> Promotora de la cocina siciliana en la Academia de Cocina Anna Tasca Lanza.</p>
+  </div>
+ 
+  <div id="rest" data-aos="fade-down">
+    <h2>Restaurantes y experiencias</h2>
+    <h4>Estas experiencias reflejan la riqueza y diversidad de la gastronomía italiana, que combina tradición, innovación y pasión por la comida.</h4>
+    <p><strong>Osteria Francescana:</strong> Ubicado en Módena, es famoso por la creatividad de Massimo Bottura y su enfoque en la reinterpretación de platos tradicionales italianos.</p>
+    <p><strong>Enoteca Pinchiorri:</strong> Situado en Florencia, ofrece una experiencia culinaria única con platos toscanos innovadores y sofisticados.</p>
+    <p><strong>Dal Pescatore:</strong> En Lombardía, liderado por Nadia Santini, se destaca por la autenticidad de la cocina regional y la atención a los sabores genuinos.</p>
+    <p><strong>La Pergola:</strong> En Roma, dirigido por Heinz Beck, combina la tradición italiana con técnicas contemporáneas, ofreciendo vistas panorámicas de la ciudad.</p>
+    <p><strong>Le Calandre:</strong> En Padua, es conocido por la innovación de los hermanos Alajmo, quienes reinterpretan la cocina italiana de manera artística.</p>
+    <p><strong>Trattorias locales:</strong> A lo largo de Italia, las trattorias ofrecen auténticas experiencias gastronómicas caseras con platos regionales y un ambiente acogedor.</p>
+    <p><strong>Catas de vino:</strong> En las regiones vinícolas como Toscana y Piamonte, se pueden disfrutar catas de vino y maridajes con quesos y embutidos locales.</p>
+    <p><strong>Festivales gastronómicos:</strong> Italia cuenta con numerosos festivales que celebran la comida regional, como el Festival de la Trufa en Alba o la Fiesta del Limón en Menton.</p>
+
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <p>
+  <H1 style="text-align: center;font-size: 35px;">Preparazione della pizza italiana</H1>
+  <script>
+    AOS.init();
+  </script>
+
+<!--AQUÍ ESTÁ EL ELEMENTO DE VIDEO-->
+  
+  <div class="center">
+      <video controls width="840" height="560">
+      <source src="PIZZA.mp4" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+    </video>
+  </div>
+  <br><br><br><br><br><br>
+
+  <!--La información fue sacada del siguiente link: https://es.wikipedia.org/wiki/Gastronom%C3%ADa_de_Italia-->
+
+</body>
+</html>
