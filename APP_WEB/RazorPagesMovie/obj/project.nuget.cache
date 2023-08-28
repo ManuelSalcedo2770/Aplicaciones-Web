@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zQou8Iw8qc4Z0BBNLNpOHsAC6jtbwHcEPN+9JgJ6lKfAAT0QgMXJ2TSfibg0WC4N+mb6WWvWm0Qye+SLywJDrg==",
+  "dgSpecHash": "T1e9ihmPEmwI7NyJp/bBzhmoephij1Qh2o5kMVZICH6bgKWYK6D4vsOb+HiPyOqkO+NLa4l3B6twbswexUVFxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\INTEG\\OneDrive\\Escritorio\\APP WEB\\RazorPagesMovie\\RazorPagesMovie.csproj",
+  "projectFilePath": "C:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\RazorPagesMovie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\INTEG\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\INTEG\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

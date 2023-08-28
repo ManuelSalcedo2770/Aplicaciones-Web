@@ -11607,11 +11607,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\INTEG\\OneDrive\\Escritorio\\APP WEB\\RazorPagesMovie\\RazorPagesMovie.csproj",
+      "projectUniqueName": "C:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\RazorPagesMovie.csproj",
       "projectName": "RazorPagesMovie",
-      "projectPath": "C:\\Users\\INTEG\\OneDrive\\Escritorio\\APP WEB\\RazorPagesMovie\\RazorPagesMovie.csproj",
+      "projectPath": "C:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\RazorPagesMovie.csproj",
       "packagesPath": "C:\\Users\\INTEG\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\INTEG\\OneDrive\\Escritorio\\APP WEB\\RazorPagesMovie\\obj\\",
+      "outputPath": "C:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\INTEG\\AppData\\Roaming\\NuGet\\NuGet.Config",
