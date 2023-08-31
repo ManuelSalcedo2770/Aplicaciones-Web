@@ -1,7 +1,7 @@
 {
   "__Version": 2,
-  "SerializedFilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\MyWebApp\\obj\\Debug\\net7.0\\project.razor.vscode.json",
-  "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\MyWebApp\\MyWebApp.csproj",
+  "SerializedFilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\obj\\Debug\\net7.0\\project.razor.vscode.json",
+  "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\RazorPagesMovie.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "7.0"
@@ -24024,40 +24024,65 @@
     ],
     "CSharpLanguageVersion": 1100
   },
-  "RootNamespace": "MyWebApp",
+  "RootNamespace": "RazorPagesMovie",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\MyWebApp\\Pages\\Error.cshtml",
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\MyWebApp\\Pages\\Index.cshtml",
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\Index.cshtml",
       "TargetPath": "Pages\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\MyWebApp\\Pages\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\Movies\\Create.cshtml",
+      "TargetPath": "Pages\\Movies\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\Movies\\Delete.cshtml",
+      "TargetPath": "Pages\\Movies\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\Movies\\Details.cshtml",
+      "TargetPath": "Pages\\Movies\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\Movies\\Edit.cshtml",
+      "TargetPath": "Pages\\Movies\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\Movies\\Index.cshtml",
+      "TargetPath": "Pages\\Movies\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\MyWebApp\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\MyWebApp\\Pages\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\MyWebApp\\Pages\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\MyWebApp\\Pages\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\INTEG\\Aplicaciones-Web\\APP_WEB\\RazorPagesMovie\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     }
