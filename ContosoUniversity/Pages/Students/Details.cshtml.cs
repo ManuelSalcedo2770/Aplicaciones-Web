@@ -1,38 +1,47 @@
-﻿using ContosoUniversity.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using ContosoUniversity.Data;
+using ContosoUniversity.Models;
 
-namespace ContosoUniversity.Pages.Students;
-
-public class DetailsModel : PageModel
+namespace ContosoUniversity.Pages.Students
 {
-    private readonly ContosoUniversity.Data.SchoolContext _context;
-
-    public DetailsModel(ContosoUniversity.Data.SchoolContext context)
+    public class DetailsModel : PageModel
     {
-        _context = context;
-    }
+        private readonly ContosoUniversity.Data.SchoolContext _context;
 
-    public Student Student { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public DetailsModel(ContosoUniversity.Data.SchoolContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        Student = await _context.Students
-            .Include(s => s.Enrollments)
-            .ThenInclude(e => e.Course)
-            .AsNoTracking()
-            .FirstOrDefaultAsync(m => m.ID == id);
+      public Student Student { get; set; } = default!; 
 
-        if (Student == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
+            if (id == null || _context.Student == null)
+            {
+                return NotFound();
+            }
+
+            var student = await _context.Student
+                .Include(s => s.Enrollments)
+                .ThenInclude(e => e.Course)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ID == id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+            else 
+            {
+                Student = student;
+            }
+            return Page();
         }
-        return Page();
     }
 }

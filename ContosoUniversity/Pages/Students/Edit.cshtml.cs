@@ -1,61 +1,68 @@
-﻿using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using ContosoUniversity.Data;
+using ContosoUniversity.Models;
 
-namespace ContosoUniversity.Pages.Students;
-
-public class EditModel : PageModel
+namespace ContosoUniversity.Pages.Students
 {
-    private readonly SchoolContext _context;
-
-    public EditModel(SchoolContext context)
+    public class EditModel : PageModel
     {
-        _context = context;
-    }
+        private readonly ContosoUniversity.Data.SchoolContext _context;
 
-    [BindProperty]
-    public Student Student { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public EditModel(ContosoUniversity.Data.SchoolContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        Student = await _context.Students.FindAsync(id);
+        [BindProperty]
+        public Student Student { get; set; } = default!;
 
-        if (Student == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
-        }
-        return Page();
-    }
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-    public async Task<IActionResult> OnPostAsync(int id)
-    {
-        var studentToUpdate = await _context.Students.FindAsync(id);
+            Student = await _context.Student.FindAsync(id);
 
-        if (studentToUpdate == null)
-        {
-            return NotFound();
-        }
-
-        if (await TryUpdateModelAsync<Student>(
-            studentToUpdate,
-            "student",
-            s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
-        {
-            await _context.SaveChangesAsync();
-            return RedirectToPage("./Index");
+            if (Student == null)
+            {
+                return NotFound();
+            }
+            return Page();
         }
 
-        return Page();
-    }
+        public async Task<IActionResult> OnPostAsync(int id)
+        {
+            var studentToUpdate = await _context.Student.FindAsync(id);
 
-    private bool StudentExists(int id)
-    {
-        return _context.Students.Any(e => e.ID == id);
+            if (studentToUpdate == null)
+            {
+                return NotFound();
+            }
+
+            if (await TryUpdateModelAsync<Student>(
+                studentToUpdate,
+                "student",
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
+            {
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
+            }
+
+            return Page();
+        }
+
+        private bool StudentExists(int id)
+        {
+          return (_context.Student?.Any(e => e.ID == id)).GetValueOrDefault();
+        }
     }
 }

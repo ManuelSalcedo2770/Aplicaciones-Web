@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jpnat\\OneDrive\\Documentos\\3er semestre\\Apps Web\\3er-parcial\\ContosoUniversity\\ContosoUniversity.csproj": {}
+    "C:\\Users\\INTEG\\Aplicaciones-Web\\ContosoUniversity\\ContosoUniversity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jpnat\\OneDrive\\Documentos\\3er semestre\\Apps Web\\3er-parcial\\ContosoUniversity\\ContosoUniversity.csproj": {
+    "C:\\Users\\INTEG\\Aplicaciones-Web\\ContosoUniversity\\ContosoUniversity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jpnat\\OneDrive\\Documentos\\3er semestre\\Apps Web\\3er-parcial\\ContosoUniversity\\ContosoUniversity.csproj",
+        "projectUniqueName": "C:\\Users\\INTEG\\Aplicaciones-Web\\ContosoUniversity\\ContosoUniversity.csproj",
         "projectName": "ContosoUniversity",
-        "projectPath": "C:\\Users\\jpnat\\OneDrive\\Documentos\\3er semestre\\Apps Web\\3er-parcial\\ContosoUniversity\\ContosoUniversity.csproj",
-        "packagesPath": "C:\\Users\\jpnat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jpnat\\OneDrive\\Documentos\\3er semestre\\Apps Web\\3er-parcial\\ContosoUniversity\\obj\\",
+        "projectPath": "C:\\Users\\INTEG\\Aplicaciones-Web\\ContosoUniversity\\ContosoUniversity.csproj",
+        "packagesPath": "C:\\Users\\INTEG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\INTEG\\Aplicaciones-Web\\ContosoUniversity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jpnat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\INTEG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -37,26 +37,36 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SQLite": {
+              "target": "Package",
+              "version": "[7.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[7.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[7.0.13, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[7.0.11, )"
             }
           },
           "imports": [
@@ -70,24 +80,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.21, 6.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.21, 6.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.21, 6.0.21]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.21, 6.0.21]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
