@@ -1,43 +1,36 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ContosoUniversity.Data;
+using ContosoUniversity.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
 
-namespace ContosoUniversity.Pages.Departments
+namespace ContosoUniversity.Pages.Departments;
+
+public class DetailsModel : PageModel
 {
-    public class DetailsModel : PageModel
+    private readonly SchoolContext _context;
+
+    public DetailsModel(SchoolContext context)
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        _context = context;
+    }
 
-        public DetailsModel(ContosoUniversity.Data.SchoolContext context)
+    public Department Department { get; set; }
+
+    public async Task<IActionResult> OnGetAsync(int? id)
+    {
+        if (id == null)
         {
-            _context = context;
+            return NotFound();
         }
 
-      public Department Department { get; set; }
+        Department = await _context.Departments
+            .Include(d => d.Administrator).FirstOrDefaultAsync(m => m.DepartmentID == id);
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        if (Department == null)
         {
-            if (id == null || _context.Departments == null)
-            {
-                return NotFound();
-            }
-
-            var department = await _context.Departments.FirstOrDefaultAsync(m => m.DepartmentID == id);
-            if (department == null)
-            {
-                return NotFound();
-            }
-            else 
-            {
-                Department = department;
-            }
-            return Page();
+            return NotFound();
         }
+        return Page();
     }
 }

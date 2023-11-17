@@ -1,43 +1,35 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ContosoUniversity.Data;
+using ContosoUniversity.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
 
-namespace ContosoUniversity.Pages.Instructors
+namespace ContosoUniversity.Pages.Instructors;
+
+public class DetailsModel : PageModel
 {
-    public class DetailsModel : PageModel
+    private readonly SchoolContext _context;
+
+    public DetailsModel(SchoolContext context)
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        _context = context;
+    }
 
-        public DetailsModel(ContosoUniversity.Data.SchoolContext context)
+    public Instructor Instructor { get; set; }
+
+    public async Task<IActionResult> OnGetAsync(int? id)
+    {
+        if (id == null)
         {
-            _context = context;
+            return NotFound();
         }
 
-      public Instructor Instructor { get; set; }
+        Instructor = await _context.Instructors.FirstOrDefaultAsync(m => m.ID == id);
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        if (Instructor == null)
         {
-            if (id == null || _context.Instructors == null)
-            {
-                return NotFound();
-            }
-
-            var instructor = await _context.Instructors.FirstOrDefaultAsync(m => m.ID == id);
-            if (instructor == null)
-            {
-                return NotFound();
-            }
-            else 
-            {
-                Instructor = instructor;
-            }
-            return Page();
+            return NotFound();
         }
+        return Page();
     }
 }

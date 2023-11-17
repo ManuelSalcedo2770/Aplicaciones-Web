@@ -1,47 +1,36 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ContosoUniversity.Data;
+using ContosoUniversity.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
 
-namespace ContosoUniversity.Pages.Courses
+namespace ContosoUniversity.Pages.Courses;
+
+public class DetailsModel : PageModel
 {
-    public class DetailsModel : PageModel
+    private readonly SchoolContext _context;
+
+    public DetailsModel(SchoolContext context)
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        _context = context;
+    }
 
-        public DetailsModel(ContosoUniversity.Data.SchoolContext context)
+    public Course Course { get; set; }
+
+    public async Task<IActionResult> OnGetAsync(int? id)
+    {
+        if (id == null)
         {
-            _context = context;
+            return NotFound();
         }
 
-      public Course Course { get; set; }
+        Course = await _context.Courses
+            .Include(c => c.Department).FirstOrDefaultAsync(m => m.CourseID == id);
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        if (Course == null)
         {
-            if (id == null || _context.Courses == null)
-            {
-                return NotFound();
-            }
-
-            //var course = await _context.Courses.FirstOrDefaultAsync(m => m.CourseID == id);
-            var course = await _context.Courses
-            .AsNoTracking()
-            .Include(c => c.Department)
-            .FirstOrDefaultAsync(m => m.CourseID == id);
-            if (course == null)
-            {
-                return NotFound();
-            }
-            else 
-            {
-                Course = course;
-            }
-            return Page();
+            return NotFound();
         }
+        return Page();
     }
 }

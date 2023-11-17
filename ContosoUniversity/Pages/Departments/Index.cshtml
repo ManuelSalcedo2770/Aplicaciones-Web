@@ -1,4 +1,4 @@
-@page
+﻿@page
 @model ContosoUniversity.Pages.Departments.IndexModel
 
 @{
@@ -22,9 +22,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Department[0].StartDate)
             </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Department[0].ConcurrencyToken)
-            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Department[0].Administrator)
             </th>
@@ -35,35 +32,30 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Department) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Budget)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Administrator.FullName)
-            </td>
-            <td>
-                @Utility.GetLastChars(item.ConcurrencyToken)
-            </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.ConcurrencyToken)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Administrator.FirstMidName)
-            </td>*@
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.DepartmentID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.DepartmentID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.DepartmentID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Department)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Budget)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Administrator.FullName)
+                </td>
+                <td>
+                    @Utility.GetLastChars(item.ConcurrencyToken)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.DepartmentID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.DepartmentID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.DepartmentID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

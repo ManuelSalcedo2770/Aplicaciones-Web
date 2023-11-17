@@ -1,12 +1,9 @@
-@page "{id:int}"
+﻿@page "{id:int}"
 @model ContosoUniversity.Pages.Departments.EditModel
-
 @{
     ViewData["Title"] = "Edit";
 }
-
-<h1>Edit</h1>
-
+<h2>Edit</h2>
 <h4>Department</h4>
 <hr />
 <div class="row">
@@ -32,7 +29,8 @@
             <div class="form-group">
                 <label asp-for="Department.StartDate" class="control-label"></label>
                 <input asp-for="Department.StartDate" class="form-control" />
-                <span asp-validation-for="Department.StartDate" class="text-danger"></span>
+                <span asp-validation-for="Department.StartDate" class="text-danger">
+                </span>
             </div>
             <div class="form-group">
                 <label class="control-label">Instructor</label>
@@ -41,27 +39,15 @@
                 <span asp-validation-for="Department.InstructorID" class="text-danger">
                 </span>
             </div>
-            @*<div class="form-group">
-                <label asp-for="Department.InstructorID" class="control-label"></label>
-                <select asp-for="Department.InstructorID" class="form-control" asp-items="ViewBag.InstructorID"></select>
-                <span asp-validation-for="Department.InstructorID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Department.ConcurrencyToken" class="control-label"></label>
-                <input asp-for="Department.ConcurrencyToken" class="form-control" />
-                <span asp-validation-for="Department.ConcurrencyToken" class="text-danger"></span>
-            </div>*@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

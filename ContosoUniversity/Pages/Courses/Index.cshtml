@@ -1,4 +1,4 @@
-@page
+﻿@page
 @model ContosoUniversity.Pages.Courses.IndexModel
 
 @{
@@ -29,7 +29,8 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Courses) {
+@foreach (var item in Model.Courses)
+{
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.CourseID)
