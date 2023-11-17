@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\build\ContosoUniversity.props" />
+  <Import Project="../build/ContosoUniversity.props" />
 </Project>
